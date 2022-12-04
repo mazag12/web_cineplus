@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:insert="components/fragments :: headerfiles">
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<title>CinePlus</title>
+
+<!--	<link th:href="@{/css/estilos.css}" rel="stylesheet">-->
+
+</head>
+<body>
+<header th:replace="components/fragments :: nav"></header>
+<!--<nav th:replace="components/nav_main :: nav_main"></nav>-->
+
+<main>
+	<div class="pelicula-principal">
+		<div class="contenedor">
+
+			<div class="p-5 rounded shadow">
+
+				<h1 class="display-4" style="font-size: 2.6rem;">!Bienvenido, <i></i> a CinePlus!</h1>
+				<p class="lead">El mejor Cine del país.</p>
+				<hr class="my-4">
+				<br>
+
+			</div>
+
+			<h3 class="titulo">Interestellar</h3>
+			<p class="descripcion">
+				Narra las aventuras de un grupo de exploradores que hacen uso de un agujero de gusano recientemente descubierto para superar las limitaciones de los viajes espaciales tripulados y vencer las inmensas distancias que tiene un viaje interestelar.
+			</p>
+			<button role="button" class="boton" th:href="@{https://www.imdb.com/video/vi1586278169/?playlistId=tt0816692?ref_=ext_shr_lnk}"><i class="fas fa-play"></i> Ver Trailer</button>
+<!--			<a class="boton" th:href="@{https://www.imdb.com/video/vi1586278169/?playlistId=tt0816692?ref_=ext_shr_lnk}"  class="fas fa-play">Ver Trailer</a>-->
+			<button role="button" class="boton"><i class="fas fa-info-circle"></i> Más información</button>
+		</div>
+	</div>
+
+	<div class="peliculas-recomendadas contenedor">
+		<div class="contenedor-titulo-controles">
+			<h3>Películas Recomendadas</h3>
+			<div class="indicadores"></div>
+		</div>
+
+		<div class="contenedor-principal">
+			<button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+
+			<div class="contenedor-carousel" >
+				<div class="carousel" >
+					<div class="pelicula">
+						<a href="#"><img  th:src="@{/images/Interstellar-DVD.webp}" alt=""></a>
+					</div>
+					<div class="pelicula">
+						<a href="#"><img th:src="@{/images/CodigoEnigma.jpg}" alt=""></a>
+					</div>
+					<div class="pelicula">
+						<a href="#"><img th:src="@{/images/Evangelion_NeonGenesis.jpg}" alt=""></a>
+					</div>
+					<div class="pelicula">
+						<a href="#"><img th:src="@{/images/JusticeLeague.jpg}" alt=""></a>
+					</div>
+					<div class="pelicula">
+						<a href="#"><img th:src="@{/images/WolfWallStreet.jpg}" alt=""></a>
+					</div>
+					<div class="pelicula">
+						<a href="#"><img th:src="@{/images/BlackpantaerII-e14e3baa19d3494d850893506501de2e.jpg}" alt=""></a>
+					</div>
+					<div class="pelicula">
+						<a href="#"><img th:src="@{/images/DraculaMovie.jpg}" alt=""></a>
+					</div>
+					<div class="pelicula">
+						<a href="#"><img th:src="@{/images/1.png}" alt=""></a>
+					</div>
+					<div class="pelicula">
+						<a href="#"><img th:src="@{/images/2.png}" alt=""></a>
+					</div>
+					<div class="pelicula">
+						<a href="#"><img th:src="@{/images/3.png}" alt=""></a>
+					</div>
+					<div class="pelicula">
+						<a href="#"><img th:src="@{/images/1.png}" alt=""></a>
+					</div>
+					<div class="pelicula">
+						<a href="#"><img th:src="@{/images/2.png}" alt=""></a>
+					</div>
+					<div class="pelicula">
+						<a href="#"><img th:src="@{/images/3.png}" alt=""></a>
+					</div>
+					<div class="pelicula">
+						<a href="#"><img th:src="@{/images/4.png}" alt=""></a>
+					</div>
+					<div class="pelicula">
+						<a href="#"><img th:src="@{/images/5.png}" alt=""></a>
+					</div>
+					<div class="pelicula">
+						<a href="#"><img th:src="@{/images/6.png}" alt=""></a>
+					</div>
+					<div class="pelicula">
+						<a href="#"><img th:src="@{/images/7.png}" alt=""></a>
+					</div>
+					<div class="pelicula">
+						<a href="#"><img th:src="@{/images/1.png}" alt=""></a>
+					</div>
+					<div class="pelicula">
+						<a href="#"><img th:src="@{/images/2.png}" alt=""></a>
+					</div>
+					<div class="pelicula">
+						<a href="#"><img th:src="@{/images/3.png}" alt=""></a>
+					</div>
+					<div class="pelicula">
+						<a href="#"><img th:src="@{/images/4.png}" alt=""></a>
+					</div>
+				</div>
+			</div>
+
+			<button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+		</div>
+	</div>
+</main>
+
+
+
+<!--<footer th:replace="components/footer :: footer"></footer>-->
+<footer th:insert="components/fragments :: footer"></footer>
+
+<script>
+	  window.watsonAssistantChatOptions = {
+	    integrationID: "5574fd94-84e2-4ee5-98ce-8fe6dbf0f742", // The ID of this integration.
+	    region: "au-syd", // The region your integration is hosted in.
+	    serviceInstanceID: "561997c0-eba0-4390-8e97-385c6dc68c48", // The ID of your service instance.
+	    onLoad: function(instance) { instance.render(); }
+	  };
+	  setTimeout(function(){
+	    const t=document.createElement('script');
+	    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+	    document.head.appendChild(t);
+	  });
+	</script>
+
+<script th:src="@{/js/main.js}"></script>
+
+<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+		integrity="sha512-U6K1YLIFUWcvuw5ucmMtT9HH4t0uz3M366qrF5y4vnyH6dgDzndlcGvH/Lz5k8NFh80SN95aJ5rqGZEdaQZ7ZQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+		integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+		crossorigin="anonymous"></script>
+<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+		integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+		crossorigin="anonymous"></script>
+
+</body>
+</html>
